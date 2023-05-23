@@ -1,8 +1,10 @@
 import './globals.css'
-import { Roboto_Flex as Roboto, Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
-const roboto = Roboto({ subsets: ['latin'], variable: '--font-body' })
-const inter = Inter({ subsets: ['latin'], variable: '--font-title' })
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
 
 export const metadata = {
   title: 'Edlávio - Pedro Alberto | Em construção',
@@ -16,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${roboto.variable} font-body`}>{children}</body>
+      <body className={`${inter.variable} font-sans text-white bg-gray-800`}>{children}</body>
     </html>
   )
 }
